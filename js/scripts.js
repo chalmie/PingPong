@@ -19,6 +19,11 @@ var pingPong = function(number) {
 
 $(document).ready(function() {
   $("form#user-number").submit(function(event) {
+
+    if (!$("input#number").val().toString().match(/^[0-9]*$|^\s+/gmi)) {
+      alert("try a number greater than 0!");
+      return false;
+    }
     // create variables for user input,output,and list items
     var number = parseInt($("input#number").val(),10);
     var returnedArray = pingPong(number);
