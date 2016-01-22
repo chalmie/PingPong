@@ -7,5 +7,11 @@ describe('pingPong', function() {
     expect(pingPong(7)).to.equal(false);
   });
 
+  it("is true for a number divisible by five", function() {
+    expect(pingPong(10)).to.equal(true);
+  });
+  it("is false for a number not divisible by five", function() {
+    expect(pingPong(7)).to.equal(false);
+  });
 
 });
