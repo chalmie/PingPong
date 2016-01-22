@@ -17,17 +17,15 @@ var pingPong = function(number) {
 };
 
 
-
-
 $(document).ready(function() {
   $("form#user-number").submit(function(event) {
-    // Make sure pingpong list is empty
-    $("ul").empty();
-
     // create variables for user input,output,and list items
     var number = parseInt($("input#number").val(),10);
     var returnedArray = pingPong(number);
     var numberList = document.getElementById("ping-pong");
+
+    // Make sure pingpong list is empty
+    $("ul").empty();
 
     // loop through output array and append to list
     for (index = 0; index < returnedArray.length; index++) {
