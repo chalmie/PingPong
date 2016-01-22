@@ -1,24 +1,24 @@
 describe('pingPong', function() {
 
-  it("is true for a number divisible by three", function() {
-    expect(pingPong(6)).to.equal(true);
-  });
-  it("is false for a number not divisible by three", function() {
-    expect(pingPong(7)).to.equal(false);
+  it("pushes numbers from one to the user number into numberArray", function() {
+    expect(pingPong(2)).to.eql([1,2])
+  })
+
+  it("returns 'ping' for a number divisible by three in numberArray", function() {
+    expect(pingPong(3)).to.eql([1,2,"ping"]);
   });
 
-  it("is true for a number divisible by five", function() {
-    expect(pingPong(10)).to.equal(true);
-  });
-  it("is false for a number not divisible by five", function() {
-    expect(pingPong(7)).to.equal(false);
+
+  it("return 'pong' for a number divisible by five in numberArray", function() {
+    expect(pingPong(5)).to.eql([1,2,"ping",4,"pong"]);
   });
 
-  it("is true for a number divisible by five and three", function() {
-    expect(pingPong(15)).to.equal(true);
+  it("return 'pingpong' for a number divisible by five and three in numberArray", function() {
+    expect(pingPong(15)).to.eql([1,2,"ping",4,"pong","ping",7,8,"ping","pong",11,"ping",13,14,"pingpong"]);
   });
-  it("is false for a number not divisible by five or three", function() {
-    expect(pingPong(7)).to.equal(false);
+
+  it("return numbers for a number not divisible by five or three in numberArray", function() {
+    expect(pingPong(1)).to.eql([1]);
   });
 
 });
