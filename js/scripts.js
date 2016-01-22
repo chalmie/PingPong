@@ -15,3 +15,29 @@ var pingPong = function(number) {
   }
   return numberArray;
 };
+
+
+
+
+$(document).ready(function() {
+  $("form#user-number").submit(function(event) {
+    // Make sure pingpong list is empty
+    $("ul").empty();
+
+    // create variables for user input,output,and list items
+    var number = parseInt($("input#number").val(),10);
+    var returnedArray = pingPong(number);
+    var numberList = document.getElementById("ping-pong");
+
+    // loop through output array and append to list
+    for (index = 0; index < returnedArray.length; index++) {
+      var listItem = document.createElement("li");
+      listItem.innerHTML = returnedArray[index];
+      numberList.appendChild(listItem);
+    }
+
+
+    $("#result").show();
+    event.preventDefault();
+  });
+});
