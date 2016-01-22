@@ -1,0 +1,49 @@
+/*Document/General*/
+
+html, body {
+  margin:0px;
+  padding: 0px;
+  height: 100%;
+}
+
+/*Header*/
+
+.header {
+  height: 150px;
+  text-align: center;
+  background-color: #F4DEB5;
+  background-repeat:no-repeat;
+  background-size: cover;
+}
+
+.header h1 {
+  line-height: 125px;
+  font-size: 60px;
+}
+
+
+/*Main*/
+.container-fluid {
+  padding:0px;
+  height:100%;
+  background-color: #E6E6E6;
+}
+
+/*Sidebar*/
+
+.side {
+  margin-top:20px;
+  margin-left: 10px;
+  padding-top: 20px;
+  background-color: #90BB90;
+  float:left;
+  position:absolute;
+  height:100%;
+}
+
+.lets-play {
+  padding-left: 50px;
+  float:right;
+  position: relative;
+  height: 100%;
+}
